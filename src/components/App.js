@@ -10,21 +10,17 @@ class App extends Component {
     name: '',
     number: '',
   };
-
   contactName = e => {
     this.setState({
       name: e.target.value,
     });
   };
-
   contactNumber = e => {
     this.setState({ number: e.target.value });
   };
-
   filterValue = e => {
     this.setState({ filter: e.target.value });
   };
-
   getFilteredContacts = () => {
     const { contacts, filter } = this.state;
     return contacts.filter(item =>
